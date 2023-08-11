@@ -1,0 +1,53 @@
+@media (min-width: 992px) {
+	.section-heading {
+		padding-top: 2em;
+		font-size: 8rem;
+	}
+	.header {
+		&__img {
+			width: auto;
+		}
+		&__slider {
+			&-p {
+				font-size: 12rem;
+				padding-left: 0.7em;
+				letter-spacing: -6px;
+			}
+			&-b {
+				font-size: 8rem;
+				padding-left: 0.5em;
+				padding-right: 0.5em;
+				letter-spacing: -4px;
+			}
+		}
+		&__desc {
+			top: 40%;
+			right: 50%;
+			transform: translateX(200%);
+
+			justify-self: center;
+		}
+	}
+	.about {
+		&__main {
+			&-img {
+				width: 40%;
+			}
+			&-desc {
+				width: 70%;
+			}
+			&-desc p {
+				line-height: 5rem;
+				font-size: 3rem;
+			}
+		}
+	}
+	.gallery {
+		display: flex;
+		&__main {			
+			img {
+				width: 320px;
+			}
+		}
+	}
+}

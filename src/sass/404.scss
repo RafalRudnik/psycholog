@@ -1,0 +1,40 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0 auto;
+	font-size: 1.6rem;
+	background-color: #bdcad7;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.error-cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.ti-error-404,
+.ti-face-id-error {
+	font-size: 12rem;
+}
+
+.ti-home-hand {
+	padding: 0.5em;
+	font-size: 6rem;
+	transition: opacity 0.3s;
+	&:hover {
+		opacity: 0.7;
+	}
+}

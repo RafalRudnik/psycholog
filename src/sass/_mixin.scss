@@ -1,0 +1,13 @@
+@use './colors' as *;
+@use './animations' as *;
+
+@mixin btnMix {
+	border: 1px solid transparent;
+	border-radius: 50%;
+	background-color: $purple-color;
+	color: white;
+	cursor: pointer;
+	&:hover {
+		animation: jello-horizontal 0.8s 0s linear both;
+	}
+}

@@ -1,0 +1,283 @@
+@use './colors' as *;
+@use './mixin' as *;
+@use './animations' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	position: relative;
+	font-family: 'Lato', sans-serif;
+	margin: 0 auto;
+	font-size: 1.6rem;
+	background-color: $bacground;
+	scroll-padding-top: 50px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 1200px;
+	padding: 0em 1em;
+}
+
+html.lenis {
+	height: auto;
+}
+
+.lenis.lenis-smooth {
+	scroll-behavior: auto;
+}
+
+a {
+	text-decoration: none;
+}
+section {
+	padding-top: 5em;
+}
+.section-heading {
+	padding-top: 1em;
+	width: 100%;
+	font-size: 4rem;
+	font-weight: 400;
+	text-align: center;
+	opacity: 0.4;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 1em 0.5em;
+	z-index: 100;
+	&__logo {
+		display: flex;
+		align-items: center;
+		img {
+			width: 60px;
+		}
+	}
+	&__desc {
+		font-size: 1.6rem;
+		padding-left: 1em;
+	}
+	&__burger {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		border: 1px solid transparent;
+		transition: background-color 0.4s;
+		cursor: pointer;
+		&:hover {
+			background-color: $purple-color-opacity;
+		}
+		&-inside {
+			position: relative;
+			width: 60%;
+			height: 60%;
+			&::before {
+				position: absolute;
+				content: '';
+				top: 30%;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: $main-color;
+				transition: 0.3s;
+			}
+			&::after {
+				position: absolute;
+				content: '';
+				bottom: 30%;
+				left: 0;
+				width: 70%;
+				height: 1px;
+				background-color: $main-color;
+				transition: width 0.3s;
+			}
+			&:hover::after {
+				width: 100%;
+			}
+			&:hover::before {
+				width: 70%;
+			}
+		}
+		&-inside.active {
+			&::before {
+				top: 50%;
+				width: 100%;
+				animation: burgerAnim 1s 0s both;
+			}
+			&::after {
+				top: 50%;
+				width: 100%;
+				animation: burgerAnimBack 1s 0s both;
+			}
+		}
+	}
+}
+.hideLogo {
+	animation: hideLogo 1s 0s both;
+}
+.showLogo {
+	animation: showLogo 1s 0s both;
+}
+
+.header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	&__img {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60%;
+		img {
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	&__slider {
+		position: absolute;
+		bottom: 10%;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		max-width: 1200px;
+		overflow: hidden;
+		p {
+			width: 5000px;
+			display: flex;
+			align-items: baseline;
+			text-align: center;
+		}
+		&-p {
+			color: $purple-color;
+			font-size: 3.8rem;
+			padding-left: 0.6em;
+		}
+		&-b {
+			color: $blue-color;
+			font-size: 2.6rem;
+			padding-left: 0.6em;
+			padding-right: 1em;
+		}
+	}
+	&__desc {
+		position: absolute;
+		top: 25%;
+		color: $main-color;
+		p {
+			padding-left: 3em;
+			line-height: 2em;
+		}
+		&-img {
+			animation: headerArrow 2s both;
+		}
+	}
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-color: $white-color;
+	&__main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+		flex-wrap: wrap;
+		padding: 5em 0em;
+		overflow: hidden;
+		&-img {
+			width: 100%;
+			img {
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+		&-desc p {
+			line-height: 2em;
+		}
+	}
+	&__small-desc {
+		width: 80%;
+		line-height: 2em;
+		padding-bottom: 8em;
+	}
+	&__button {
+		width: 100%;
+		text-align: right;
+		padding-bottom: 8em;
+	}
+}
+
+.btn {
+	width: 100px;
+	height: 100px;
+	@include btnMix;
+	z-index: 3;
+}
+
+.gallery {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	height: 880px;
+	width: 100%;
+	background-color: $bacground;
+	&__wrapper {
+		display: flex;
+		justify-content: space-evenly;
+		height: 100%;
+		width: 100%;
+		max-width: 1200px;
+		overflow: hidden;
+	}
+	&__main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 4em;
+		img {
+			width: 320px;
+			border-radius: 12px;
+			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+		}
+	}
+}
+
+.work {
+	background-color: $white-color;
+	height: 100vh;
+}
+
+@import './small';
+@import './medium';
+@import './large';

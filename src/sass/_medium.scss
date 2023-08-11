@@ -1,0 +1,74 @@
+@media (min-width: 768px) {
+	.section-heading {
+		padding-top: 2em;
+		font-size: 6rem;
+	}
+	.nav {
+		&__logo {
+			img {
+				width: 124px;
+			}
+		}
+		&__desc {
+			font-size: 2rem;
+		}
+		&__burger {
+			width: 100px;
+			height: 100px;
+		}
+	}
+	.header {
+		&__img {
+			width: 60%;
+		}
+		&__slider {
+			&-p {
+				font-size: 8rem;
+			}
+			&-b {
+				font-size: 5.6rem;
+				padding-right: 0.6em;
+			}
+		}
+		&__desc {
+			top: 50%;
+			right: 30px;
+			color: $main-color;
+			p {
+				padding-left: 3em;
+				line-height: 2em;
+			}
+		}
+	}
+	.about {
+		&__main {
+			gap: 0em;
+			flex-wrap: nowrap;
+			padding: 8em 0em;
+			width: 100%;
+			&-img {
+				width: 30%;
+			}
+			&-desc {
+				width: 70%;
+			}
+			&-desc p {
+				line-height: 2em;
+				font-size: 2rem;
+			}
+		}
+		&__small-desc {
+			width: 60%;
+			font-size: 2rem;
+		}
+	}
+	.gallery {
+		display: flex;
+		&__main {
+			
+			img {
+				width: 230px;
+			}
+		}
+	}
+}
