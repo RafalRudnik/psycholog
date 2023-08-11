@@ -46,10 +46,10 @@ resolution.add('(min-width: 768px)', () => {
 	gsap.fromTo(
 		galleryTwo,
 		{
-			y: 0,
+			y: '+=200',
 		},
 		{
-			y: '-=400',
+			y: '-=300',
 			duration: 5,
 			ease: 'easeInOut',
 			scrollTrigger: {
@@ -166,7 +166,7 @@ textAnim.forEach((char, i) => {
 	gsap.from(text.words, {
 		scrollTrigger: {
 			trigger: char,
-			start: 'top 80%',
+			start: 'top 60%',
 			end: 'top 20%',
 			scrub: true,
 			markers: false,
