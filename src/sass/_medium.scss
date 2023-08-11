@@ -54,7 +54,7 @@
 			}
 			&-desc p {
 				line-height: 2em;
-				font-size: 2rem;
+				font-size: 3rem;
 			}
 		}
 		&__small-desc {
@@ -65,9 +65,31 @@
 	.gallery {
 		display: flex;
 		&__main {
-			
 			img {
 				width: 230px;
+			}
+		}
+	}
+	.work {
+		&__main {
+			padding-top: 8em;
+			p {
+				width: 70%;
+				font-size: 3rem;
+			}
+		}
+		&__desc {
+			flex-wrap: nowrap;
+			&-img {
+				width: 50%;
+				img {
+					width: 100%;
+					object-fit: cover;
+					object-position: center;
+				}
+			}
+			&-txt {
+				width: 50%;
 			}
 		}
 	}

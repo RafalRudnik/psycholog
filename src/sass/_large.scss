@@ -34,7 +34,7 @@
 				width: 40%;
 			}
 			&-desc {
-				width: 70%;
+				width: 60%;
 			}
 			&-desc p {
 				line-height: 5rem;
@@ -44,9 +44,23 @@
 	}
 	.gallery {
 		display: flex;
-		&__main {			
+		&__main {
 			img {
 				width: 320px;
+			}
+		}
+	}
+	.work {
+		&__main {
+			p {
+				width: 60%;
+			}
+		}
+		&__desc {
+			&-txt {
+				height: 450px;
+				font-size: 2rem;
+				padding: 2em 0em;
 			}
 		}
 	}
