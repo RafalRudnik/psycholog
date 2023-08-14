@@ -1,5 +1,6 @@
 const burgerBtn = document.querySelector('.nav__burger-inside');
 const logo = document.querySelector('.nav__logo');
+const offerBtn = document.querySelector('.offer-btn');
 
 const handleOpenMenu = () => {
 	burgerBtn.classList.toggle('active');
@@ -14,6 +15,7 @@ const hideLogo = () => {
 		logo.classList.add('showLogo');
 	}
 };
+
 
 burgerBtn.addEventListener('click', handleOpenMenu);
 window.addEventListener('scroll', hideLogo);

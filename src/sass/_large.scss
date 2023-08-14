@@ -64,4 +64,25 @@
 			}
 		}
 	}
+	.offer {
+		&__logo {
+			font-size: 14rem;
+			opacity: 0.1;
+			transform: rotate(0deg);
+		}
+		&__logo-adult {
+			right: 200px;
+		}
+		&__list-kids {
+			width: 70%;
+			ul {
+				padding-left: 20em;
+			}
+		}
+		&__list-adult {
+			ul {
+				padding-right: 40em;
+			}
+		}
+	}
 }

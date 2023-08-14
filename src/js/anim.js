@@ -7,6 +7,8 @@ const textAnim = document.querySelectorAll('.text-anim');
 const galleryOne = document.querySelector('.gallery-one');
 const galleryTwo = document.querySelector('.gallery-two');
 const galleryThree = document.querySelector('.gallery-three');
+const offerBtn = document.querySelector('.offer-btn');
+
 
 if (window.innerWidth > 992) {
 	const lenis = new Lenis();
@@ -166,7 +168,7 @@ textAnim.forEach((char, i) => {
 	gsap.from(text.words, {
 		scrollTrigger: {
 			trigger: char,
-			start: 'top 60%',
+			start: 'top 80%',
 			end: 'top 20%',
 			scrub: true,
 			markers: false,
@@ -175,3 +177,33 @@ textAnim.forEach((char, i) => {
 		stagger: 0.1,
 	});
 });
+
+const xTo = gsap.quickTo(offerBtn, 'x', {
+	duration: 1,
+	ease: 'elastic.out(1, 0.3)',
+});
+9;
+
+const yTo = gsap.quickTo(offerBtn, 'y', {
+	duration: 1,
+	ease: 'elastic.out(1, 0.3)',
+});
+
+const mouseMove = (e) => {
+	const { clientX, clientY } = e;
+	const { height, width, left, top } = offerBtn.getBoundingClientRect();
+	const x = clientX - (left + width / 2);
+	const y = clientY - (top + height / 2);
+	xTo(x);
+	yTo(y);
+};
+
+const mouseLeave = (e) => {
+	gsap.to(offerBtn, { x: 0, duration: 1 });
+	gsap.to(offerBtn, { y: 0, duration: 1 });
+	xTo(0);
+	yTo(0);
+};
+
+offerBtn.addEventListener('mousemove', mouseMove);
+offerBtn.addEventListener('mouseleave', mouseLeave);

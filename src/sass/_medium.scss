@@ -93,4 +93,38 @@
 			}
 		}
 	}
+	.offer {
+		&-img {
+			height: 711px;
+		}
+		&__logo {
+			display: block;
+			position: absolute;
+			font-size: 10rem;
+			opacity: 0.1;
+			transform: rotate(90deg);
+		}
+		&__adult {
+			justify-content: center;
+		}
+		&__logo-kids {
+			top: 50%;
+			left: 0%;
+		}
+		&__logo-adult {
+			top: 40%;
+			right: 0;
+		}
+		&__list-kids {
+			width: 60%;
+			ul {
+				padding-left: 8em;
+			}
+		}
+		&__list-adult {
+			ul {
+				padding-right: 8em;
+			}
+		}
+	}
 }
