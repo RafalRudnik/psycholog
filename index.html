@@ -180,10 +180,84 @@
                     <button class="btn offer-btn">Oferta</button>
                 </div>
 
+                <div class="offer__tags">
+                    <p>Psuchoterapia, psycholog, psycholożka, pomoc dzieciom, pomoc rodzinom, pomoc psychologiczna.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="section-heading">
+                <p>Kontakt</p>
+            </div>
+            <div class="wrapper">
+                <div class="contact__main">
+                    <form action="mail.php" method="post" class="contact-form">
+
+                        <div class="contact-box">
+                            <input type="text" id="name" name="name" placeholder="Imię">
+                            <p class="input-error">Musisz podać imię</p>
+                        </div>
+                        <div class="contact-box">
+                            <input type="email" id="email" name="email" placeholder="Adres @">
+                            <p class="mail-error">Musisz podać prawidłowy @</p>
+                        </div>
+                        <div class="contact-box">
+                            <textarea name="msg" id="msg" rows="7" placeholder="Wiadomość..." ></textarea>
+                        </div>
+
+                        <span></span><button class="sendBtn">Send</button>
+
+
+
+                    </form>
+                    <div class="contact__main-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.150317811463!2d15.47433281321741!3d51.93121167953615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4706115138875d73%3A0x820bf0649e77995e!2sFrancuska%2052%2C%2065-943%20Zielona%20G%C3%B3ra!5e0!3m2!1spl!2spl!4v1692618552286!5m2!1spl!2spl"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="contact__rodo">
+                    <p>Klikając wyślij, wyrażasz zgodę na przetwarzanie swoich danych osobowych podanych w forlumarzu,
+                        tylko na potrzeby udzielenia odpowiedzi.</p>
+                </div>
             </div>
         </section>
 
     </main>
+
+    <footer class="footer">
+
+        <div class="wrapper">
+            <div class="footer__data">
+                <div class="footer__data-logo">
+                    <img src="./dist/img/Logo.png" alt="logo">
+                </div>
+                <div class="footer__data-contact">
+                    <p>Agata Łopato</p>
+                    <p>lopato.agata@gmail.com</p>
+                    <p>Tel. 661671589</p>
+                    Ul. Francuska 52 (Centrum Handlowe Francuska) 1 piętro gabinet nr 4
+                    Zielona Góra
+                </div>
+            </div>
+        </div>
+        <div class="footer__links">
+            <p>Projekt i wykonanie &copy; <span class="currYear"></span> <a href="https://rafal-rudnik.com/"
+                    rel="noopener" target="_blank">Rafał Rudnik</a> | <a href="https://bnc-web.com/" rel="noopener"
+                    target="_blank">BNC Web</a></p>
+            <p class="footer__attribiute">Image by <a
+                    href="https://www.freepik.com/free-vector/mental-health-landing-page-template_16679655.htm#page=6&query=handrawn%20therapy&position=14&from_view=search&track=ais"
+                    rel="noopener" target="_blank">Freepik</a>
+                <a href="https://www.freepik.com/free-vector/young-indian-woman-thinking-thought-bubble-white-background_29826198.htm#query=handrawn%20girl%20thinking&position=3&from_view=search&track=ais"
+                    rel="noopener" target="_blank">
+                    | Image
+                    by Rochak Shukla</a> on Freepik
+            </p>
+        </div>
+    </footer>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

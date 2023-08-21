@@ -110,11 +110,11 @@ const tl = gsap.timeline({
 		trigger: slider,
 		start: 'top: 78%',
 		end: 'top: 0%',
-		scrub: 2,
+		scrub: 20,
 	},
 });
 
-tl.to(slider, { x: 300, duration: 40 });
+tl.to(slider, { x: 360, duration: 40 });
 
 // gsap.fromTo(
 // 	slider,
@@ -199,8 +199,8 @@ const mouseMove = (e) => {
 };
 
 const mouseLeave = (e) => {
-	gsap.to(offerBtn, { x: 0, duration: 1 });
-	gsap.to(offerBtn, { y: 0, duration: 1 });
+	gsap.to(offerBtn, { x: 0, duration: 1.5 });
+	gsap.to(offerBtn, { y: 0, duration: 1.5 });
 	xTo(0);
 	yTo(0);
 };

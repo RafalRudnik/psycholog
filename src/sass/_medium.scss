@@ -96,6 +96,7 @@
 	.offer {
 		&-img {
 			height: 711px;
+			background-image: url('/dist/img/09B4150.png');
 		}
 		&__logo {
 			display: block;
@@ -125,6 +126,22 @@
 			ul {
 				padding-right: 8em;
 			}
+		}
+	}
+	.contact {
+		&__main {
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 2em;
+			form {
+				width: 45%;
+			}
+			&-map {
+				width: 50%;
+			}
+		}
+		&__rodo {
+			width: 40%;
 		}
 	}
 }
