@@ -84,3 +84,32 @@
 		transform: rotate(360deg);
 	}
 }
+
+@keyframes showMenu {
+	0% {
+		transform: translateX(100%);
+		border-radius: 50%;
+	}
+	50% {
+		transform: translateX(50%);
+		border-radius: 50%;
+	}
+	100% {
+		transform: translateX(0%);
+		border-radius: 0%;
+	}
+}
+@keyframes hideMenu {
+	0% {
+		transform: translateX(0%);
+		border-radius: 0%;
+	}
+	50% {
+		transform: translateX(70%);
+		border-radius: 50%;
+	}
+	100% {
+		transform: translateX(100%);
+		border-radius: 50%;
+	}
+}

@@ -8,7 +8,7 @@ const galleryOne = document.querySelector('.gallery-one');
 const galleryTwo = document.querySelector('.gallery-two');
 const galleryThree = document.querySelector('.gallery-three');
 const offerBtn = document.querySelector('.offer-btn');
-
+const offerLogo = document.querySelectorAll('.offer__logo');
 
 if (window.innerWidth > 992) {
 	const lenis = new Lenis();
@@ -79,6 +79,23 @@ resolution.add('(min-width: 768px)', () => {
 			},
 		}
 	);
+
+	offerLogo.forEach((logo) => {
+		gsap.fromTo(
+			logo,
+			{ scaleY: 0 },
+			{
+				scrollTrigger: {
+					trigger: logo,
+					start: 'top 60%',
+					// end: 'top 20%',
+				},
+				scaleY: 1,
+				transformOrigin: 'top',
+				stagger: 0.06,
+			}
+		);
+	});
 });
 
 resolution.add('(min-width: 1000px)', () => {
@@ -116,23 +133,6 @@ const tl = gsap.timeline({
 
 tl.to(slider, { x: 360, duration: 40 });
 
-// gsap.fromTo(
-// 	slider,
-// 	{
-// 		x: '-=40',
-// 	},
-// 	{
-// 		x: '+=400',
-// 		duration: 5,
-// 		ease: 'easeInOut',
-// 		scrollTrigger: {
-// 			trigger: slider,
-// 			start: 'top: 100%',
-// 			end: 'top: 0%',
-// 			scrub: true,
-// 		},
-// 	}
-// );
 headerDesc.forEach((char, i) => {
 	const text = new SplitType(char, { types: 'chars' });
 	gsap.from(text.chars, {

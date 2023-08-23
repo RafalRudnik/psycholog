@@ -109,12 +109,12 @@
 			justify-content: center;
 		}
 		&__logo-kids {
-			top: 50%;
-			left: 0%;
+			top: 60%;
+			left: 10%;
 		}
 		&__logo-adult {
-			top: 40%;
-			right: 0;
+			top: 60%;
+			right: -10%;
 		}
 		&__list-kids {
 			width: 60%;
@@ -135,13 +135,14 @@
 			gap: 2em;
 			form {
 				width: 45%;
+				padding-top: 0em;
 			}
 			&-map {
 				width: 50%;
 			}
 		}
 		&__rodo {
-			width: 40%;
+			width: 90%;
 		}
 	}
 }

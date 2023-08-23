@@ -22,6 +22,7 @@ body {
 	font-size: 1.6rem;
 	background-color: $bacground;
 	scroll-padding-top: 50px;
+	overflow: hidden;
 }
 
 .wrapper {
@@ -101,7 +102,7 @@ section {
 				width: 100%;
 				height: 1px;
 				background-color: $main-color;
-				transition: 0.3s;
+				transition: 0.3s, background-color 0.3s;
 			}
 			&::after {
 				position: absolute;
@@ -111,7 +112,7 @@ section {
 				width: 70%;
 				height: 1px;
 				background-color: $main-color;
-				transition: width 0.3s;
+				transition: width 0.3s, background-color 0.3s;
 			}
 			&:hover::after {
 				width: 100%;
@@ -125,11 +126,13 @@ section {
 				top: 50%;
 				width: 100%;
 				animation: burgerAnim 1s 0s both;
+				background-color: $white-color;
 			}
 			&::after {
 				top: 50%;
 				width: 100%;
 				animation: burgerAnimBack 1s 0s both;
+				background-color: $white-color;
 			}
 		}
 	}
@@ -139,6 +142,35 @@ section {
 }
 .showLogo {
 	animation: showLogo 1s 0s both;
+}
+
+.menu {
+	position: fixed;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+	font-size: 3rem;
+	list-style: none;
+	width: 50%;
+	height: 100vh;
+	background-color: $blue-color;
+	border-radius: 50%;
+	transform: translateX(100%);
+	z-index: 70;
+	&__item {
+		a {
+			color: $white-color;
+		}
+	}
+}
+.activeMenu {
+	animation: showMenu .6s 0s linear both;
+}
+.hideMenu {
+	animation: hideMenu .6s 0s linear both;
 }
 
 .header {
@@ -371,16 +403,22 @@ section {
 		width: 100%;
 		padding: 8em 0em;
 		form {
+			position: relative;
 			display: block;
 			width: 100%;
+			padding-top: 4em;
 			input,
 			textarea {
+				position: relative;
 				width: 80%;
 				padding: 1em;
 				border: none;
 				border-bottom: 1px solid $main-color;
 				outline: none;
 				&::placeholder {
+					position: absolute;
+					bottom: 0;
+					padding-bottom: 1em;
 					font-size: 1.4rem;
 					font-family: 'Lato', sans-serif;
 				}
@@ -397,17 +435,35 @@ section {
 				}
 			}
 			.mail-error,
-			.input-error {
+			.input-error,
+			.result-error {
 				padding-bottom: 2em;
 				font-size: 1.4rem;
 				color: red;
 				visibility: hidden;
+			}
+			#result {
+				width: 20%;
+			}
+			.sendBtn {
+				margin-top: 2em;
+				// position: absolute;
+				// bottom: 0px;
+				// left: 50%;
+				// transform: translateX(-50%);
+				@include btnMix;
+				width: 50px;
+				height: 50px;
+			}
+			p {
+				padding-top: 2em;
 			}
 		}
 		&-map {
 			width: 100%;
 			iframe {
 				width: 100%;
+				height: 100%;
 			}
 		}
 	}
@@ -422,6 +478,13 @@ section {
 }
 .contact-box.error .mail-error {
 	visibility: visible;
+}
+.contact-box.error .result-error {
+	visibility: visible;
+}
+
+.success {
+	color: $blue-color;
 }
 
 .footer {
