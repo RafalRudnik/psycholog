@@ -113,3 +113,32 @@
 		border-radius: 50%;
 	}
 }
+
+@keyframes offerOpen {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes offerClose {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+@keyframes offerHederAnim {
+	0% {
+		transform: scale(5);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

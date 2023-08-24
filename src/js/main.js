@@ -4,6 +4,9 @@ const offerBtn = document.querySelector('.offer-btn');
 const footerYear = document.querySelector('.currYear');
 const menu = document.querySelector('.menu');
 const allLinks = document.querySelectorAll('.menu__item a');
+const sectionOffer = document.querySelector('.offer-extend');
+const offerCloseBtn = document.querySelector('.closeOfferBtn');
+const offerHeader = document.querySelectorAll('.mental');
 
 const handleOpenMenu = () => {
 	burgerBtn.classList.toggle('active');
@@ -15,6 +18,9 @@ const handleClose = () => {
 	burgerBtn.classList.toggle('active');
 	menu.classList.toggle('activeMenu');
 	menu.classList.add('hideMenu');
+	if (sectionOffer.classList.contains('offer-active')) {
+		handleCloseOffer();
+	}	
 };
 
 const hideLogo = () => {
@@ -27,15 +33,49 @@ const hideLogo = () => {
 	}
 };
 
+const handleOfferAnimation = () => {
+	let delayTime = 1;
+	offerHeader.forEach((item) => {
+		item.classList.toggle('offerHeaderAnim');
+		item.style.animationDelay = '.' + delayTime + 's';
+		delayTime++;
+	});
+};
+
 const handleYear = () => {
 	let date = new Date().getFullYear();
 	footerYear.textContent = date;
+};
+
+const handleOpenOffer = () => {
+	logo.classList.add('hideLogo');
+	sectionOffer.classList.remove('offer-close');
+	sectionOffer.classList.add('offer-active');
+	handleOfferAnimation();
+};
+
+const handleCloseOffer = () => {
+	logo.classList.remove('hideLogo');
+	sectionOffer.classList.remove('offer-active');
+	sectionOffer.classList.add('offer-close');
+	offerToTheTop();
+	handleOfferAnimation();
+};
+
+const offerToTheTop = () => {
+	window.sectionOffer.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	});
 };
 
 handleYear();
 burgerBtn.addEventListener('click', handleOpenMenu);
 window.addEventListener('scroll', hideLogo);
 allLinks.forEach((link) => link.addEventListener('click', handleClose));
+// allLinks.forEach((link) => link.addEventListener('click', handleCloseOffer));
+offerBtn.addEventListener('click', handleOpenOffer);
+offerCloseBtn.addEventListener('click', handleCloseOffer);
 
 // ================= FORM =====================
 

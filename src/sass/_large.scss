@@ -92,4 +92,25 @@
 			}
 		}
 	}
+	.offer-extend {
+		&__img {
+			height: 1000px;
+			.mental {
+				position: absolute;
+				font-size: 12rem;
+				&-one {
+					top: 200px;
+					left: 70px;
+				}
+				&-two {
+					top: 400px;
+					left: 140px;
+				}
+				&-three {
+					top: 600px;
+					left: 210px;
+				}
+			}
+		}
+	}
 }

@@ -22,7 +22,6 @@ body {
 	font-size: 1.6rem;
 	background-color: $bacground;
 	scroll-padding-top: 50px;
-	overflow: hidden;
 }
 
 .wrapper {
@@ -41,6 +40,10 @@ html.lenis {
 
 .lenis.lenis-smooth {
 	scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
 }
 
 a {
@@ -152,25 +155,30 @@ section {
 	align-items: center;
 	justify-content: center;
 	gap: 2em;
-	font-size: 3rem;
+	font-size: 2rem;
 	list-style: none;
-	width: 50%;
+	width: 100%;
 	height: 100vh;
 	background-color: $blue-color;
-	border-radius: 50%;
+	border-radius: 100px;
 	transform: translateX(100%);
 	z-index: 70;
 	&__item {
+		border: 1px solid transparent;
+		transition: transform 0.3s;
+		&:hover {
+			transform: scale(1.2);
+		}
 		a {
 			color: $white-color;
 		}
 	}
 }
 .activeMenu {
-	animation: showMenu .6s 0s linear both;
+	animation: showMenu 0.4s 0s linear both;
 }
 .hideMenu {
-	animation: hideMenu .6s 0s linear both;
+	animation: hideMenu 0.5s 0s linear both;
 }
 
 .header {
@@ -439,7 +447,7 @@ section {
 			.result-error {
 				padding-bottom: 2em;
 				font-size: 1.4rem;
-				color: red;
+				color: $purple-color;
 				visibility: hidden;
 			}
 			#result {
@@ -512,6 +520,7 @@ section {
 		}
 	}
 	&__links {
+		font-size: 1.4rem;
 		padding: 1em;
 		a {
 			color: $main-color;
@@ -523,6 +532,116 @@ section {
 		color: darkgrey;
 		text-align: center;
 	}
+	hr {
+		width: 100%;
+	}
+}
+
+.offer-extend {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	background-color: $bacground;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	transform: translateY(100%);
+	z-index: 40;
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+	&__img {
+		position: relative;
+		width: 100%;
+		height: 500px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+		.mental {
+			position: absolute;
+			font-size: 4rem;
+			color: $blue-color;
+			&-one {
+				top: 180px;
+				left: 20px;
+			}
+			&-two {
+				top: 240px;
+				left: 40px;
+			}
+			&-three {
+				top: 300px;
+				left: 60px;
+			}
+		}
+	}
+	&__main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		background-color: $white-color;
+		&-header {
+			padding: 5em 0em;
+			font-size: 4rem;
+		}
+		&-container {
+			&--header {
+				align-self: flex-start;
+				font-size: 2rem;
+				padding-bottom: 2em;
+			}
+			&--txt {
+				width: 90%;
+				padding-bottom: 4em;
+				line-height: 3rem;
+			}
+		}
+	}
+	&__footer {
+		position: relative;
+		padding: 8em 0em;
+		&-contact {
+			display: flex;
+			align-self: flex-start;
+			flex-direction: column;
+			padding: 4em 0em;
+			text-align: left;
+			width: 70%;
+			p {
+				line-height: 3rem;
+			}
+		}
+		a {
+			position: absolute;
+			bottom: 5px;
+			color: lightgray;
+			font-size: 1rem;
+		}
+	}
+}
+
+.offer-active {
+	animation: offerOpen 1s 0s both;
+}
+
+.offer-close {
+	animation: offerClose 1s 0s both;
+}
+
+.offerHeaderAnim {
+	animation: offerHederAnim 1s both;
 }
 
 @import './small';
