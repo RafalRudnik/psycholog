@@ -186,13 +186,27 @@
 					width: 70%;
 					padding-bottom: 5em;
 					line-height: 3rem;
-					letter-spacing: 1.4px;
+					letter-spacing: 1px;
 				}
 			}
 		}
 		&__footer {
 			&-contact {
 				font-size: 2rem;
+			}
+		}
+	}
+	.about-expand {
+		&__main {
+			gap: 10em;
+			font-size: 3rem;
+			&-bottom {
+				padding-bottom: 2em;
+			}
+			&-top,
+			&-middle,
+			&-bottom {
+				width: 70%;
 			}
 		}
 	}

@@ -11,6 +11,8 @@ const offerBtn = document.querySelector('.offer-btn');
 const offerLogo = document.querySelectorAll('.offer__logo');
 const sectionOffer = document.querySelector('.offer-extend');
 
+
+
 if (window.innerWidth > 992) {
 	const lenis = new Lenis();
 

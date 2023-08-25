@@ -156,6 +156,7 @@ section {
 	justify-content: center;
 	gap: 2em;
 	font-size: 2rem;
+	font-weight: 300;
 	list-style: none;
 	width: 100%;
 	height: 100vh;
@@ -629,6 +630,67 @@ section {
 			color: lightgray;
 			font-size: 1rem;
 		}
+	}
+}
+
+.about-expand {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	background-color: $white-color;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	transform: translateY(100%);
+	z-index: 40;
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		.about-bgc {
+			position: absolute;
+			bottom: 0;
+			opacity: 0.1;
+			width: 100%;
+		}
+		.offer-extend__footer-btn {
+			width: 100%;
+			background-color: $bacground;
+			display: flex;
+			justify-content: center;
+			padding: 10em 0em;
+		}
+	}
+	&__main {
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 10em;
+		font-size: 3rem;
+		line-height: 4rem;
+		&-top,
+		&-bottom {
+			align-self: flex-start;
+		}
+		&-middle {
+			align-self: flex-end;
+		}
+		&-bottom {
+			padding-bottom: 3em;
+		}
+	}
+	&__linkTitle {
+		align-self: flex-start;
+		font-weight: bold;
+		font-size: 3rem;
+		padding: 3em 0em;
 	}
 }
 

@@ -7,6 +7,9 @@ const allLinks = document.querySelectorAll('.menu__item a');
 const sectionOffer = document.querySelector('.offer-extend');
 const offerCloseBtn = document.querySelector('.closeOfferBtn');
 const offerHeader = document.querySelectorAll('.mental');
+const sectionAbout = document.querySelector('.about-expand');
+const aboutCloseBtn = document.querySelector('.closeAboutBtn');
+const aboutBtn = document.querySelector('.about-btn');
 
 const handleOpenMenu = () => {
 	burgerBtn.classList.toggle('active');
@@ -20,7 +23,10 @@ const handleClose = () => {
 	menu.classList.add('hideMenu');
 	if (sectionOffer.classList.contains('offer-active')) {
 		handleCloseOffer();
-	}	
+	}
+	if (sectionAbout.classList.contains('offer-active')) {
+		handleCloseAbout();
+	}
 };
 
 const hideLogo = () => {
@@ -69,6 +75,26 @@ const offerToTheTop = () => {
 	});
 };
 
+const handleOpenAbout = () => {
+	logo.classList.add('hideLogo');
+	sectionAbout.classList.remove('offer-close');
+	sectionAbout.classList.add('offer-active');
+};
+
+const handleCloseAbout = () => {
+	logo.classList.remove('hideLogo');
+	sectionAbout.classList.remove('offer-active');
+	sectionAbout.classList.add('offer-close');
+	aboutToTheTop();
+};
+
+const aboutToTheTop = () => {
+	window.sectionAbout.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	});
+};
+
 handleYear();
 burgerBtn.addEventListener('click', handleOpenMenu);
 window.addEventListener('scroll', hideLogo);
@@ -76,6 +102,8 @@ allLinks.forEach((link) => link.addEventListener('click', handleClose));
 // allLinks.forEach((link) => link.addEventListener('click', handleCloseOffer));
 offerBtn.addEventListener('click', handleOpenOffer);
 offerCloseBtn.addEventListener('click', handleCloseOffer);
+aboutBtn.addEventListener('click', handleOpenAbout);
+aboutCloseBtn.addEventListener('click', handleCloseAbout);
 
 // ================= FORM =====================
 
