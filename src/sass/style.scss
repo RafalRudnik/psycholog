@@ -521,6 +521,7 @@ section {
 		}
 	}
 	&__links {
+		text-align: center;
 		font-size: 1.4rem;
 		padding: 1em;
 		a {
@@ -673,7 +674,7 @@ section {
 		align-items: center;
 		flex-direction: column;
 		gap: 10em;
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 		line-height: 4rem;
 		&-top,
 		&-bottom {
@@ -706,7 +707,7 @@ section {
 			width: 100%;
 		}
 		&-item--first {
-			border-top: 1px solid $main-color;
+			border-top: 1px solid $bacground;
 		}
 		&-item {
 			display: flex;
@@ -716,8 +717,8 @@ section {
 			height: 100px;
 			text-align: center;
 			font-size: 1.4rem;
-			border-bottom: 1px solid $main-color;
-			transition: background-color 0.3s;
+			border-bottom: 1px solid $bacground;
+			transition: background-color 0.4s;
 			a {
 				color: $main-color;
 				transition: color 0.3s;
