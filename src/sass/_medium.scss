@@ -143,6 +143,9 @@
 			}
 			&-map {
 				width: 50%;
+				iframe {
+					height: 100%;
+				}
 			}
 		}
 		&__rodo {
@@ -186,7 +189,6 @@
 					width: 70%;
 					padding-bottom: 5em;
 					line-height: 3rem;
-					letter-spacing: 1px;
 				}
 			}
 		}
@@ -199,7 +201,7 @@
 	.about-expand {
 		&__main {
 			gap: 10em;
-			font-size: 3rem;
+			font-size: 2rem;
 			&-bottom {
 				padding-bottom: 2em;
 			}
@@ -207,6 +209,11 @@
 			&-middle,
 			&-bottom {
 				width: 70%;
+			}
+		}
+		&__links {
+			&-item {
+				font-size: 1.6rem;
 			}
 		}
 	}

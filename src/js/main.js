@@ -61,7 +61,6 @@ const handleOpenOffer = () => {
 };
 
 const handleCloseOffer = () => {
-	logo.classList.remove('hideLogo');
 	sectionOffer.classList.remove('offer-active');
 	sectionOffer.classList.add('offer-close');
 	offerToTheTop();
@@ -82,7 +81,6 @@ const handleOpenAbout = () => {
 };
 
 const handleCloseAbout = () => {
-	logo.classList.remove('hideLogo');
 	sectionAbout.classList.remove('offer-active');
 	sectionAbout.classList.add('offer-close');
 	aboutToTheTop();
@@ -99,7 +97,6 @@ handleYear();
 burgerBtn.addEventListener('click', handleOpenMenu);
 window.addEventListener('scroll', hideLogo);
 allLinks.forEach((link) => link.addEventListener('click', handleClose));
-// allLinks.forEach((link) => link.addEventListener('click', handleCloseOffer));
 offerBtn.addEventListener('click', handleOpenOffer);
 offerCloseBtn.addEventListener('click', handleCloseOffer);
 aboutBtn.addEventListener('click', handleOpenAbout);

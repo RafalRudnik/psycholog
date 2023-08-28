@@ -472,7 +472,7 @@ section {
 			width: 100%;
 			iframe {
 				width: 100%;
-				height: 100%;
+				height: 300px;
 			}
 		}
 	}
@@ -673,7 +673,7 @@ section {
 		align-items: center;
 		flex-direction: column;
 		gap: 10em;
-		font-size: 3rem;
+		font-size: 1.6rem;
 		line-height: 4rem;
 		&-top,
 		&-bottom {
@@ -691,6 +691,44 @@ section {
 		font-weight: bold;
 		font-size: 3rem;
 		padding: 3em 0em;
+	}
+	&__links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding: 5em 0em;
+		&-list {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			list-style: none;
+			width: 100%;
+		}
+		&-item--first {
+			border-top: 1px solid $main-color;
+		}
+		&-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100px;
+			text-align: center;
+			font-size: 1.4rem;
+			border-bottom: 1px solid $main-color;
+			transition: background-color 0.3s;
+			a {
+				color: $main-color;
+				transition: color 0.3s;
+			}
+			&:hover {
+				background-color: $blue-color;
+			}
+			&:hover a {
+				color: $white-color;
+			}
+		}
 	}
 }
 
