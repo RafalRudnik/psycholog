@@ -216,5 +216,16 @@
 				font-size: 1.6rem;
 			}
 		}
+		&__card {
+			.about-bgc {
+				display: block;
+			}
+			.about-bgc--two {
+				display: block;
+			}
+		}
+		&__hero {
+			height: 800px;
+		}
 	}
 }

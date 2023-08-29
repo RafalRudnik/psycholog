@@ -624,6 +624,12 @@ section {
 			p {
 				line-height: 3rem;
 			}
+			.phone-no {
+				a {
+					color: $main-color !important;
+					text-decoration: none;
+				}
+			}
 		}
 		a {
 			position: absolute;
@@ -649,16 +655,32 @@ section {
 	overflow-x: hidden;
 	transform: translateY(100%);
 	z-index: 40;
+	&__hero {
+		height: 400px;
+		width: 100%;
+		background-image: url('/dist/img/_09B4142sm.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: $bacground;
+	}
 	&__card {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
 		.about-bgc {
+			display: none;
 			position: absolute;
-			bottom: 0;
-			opacity: 0.1;
+			bottom: -10%;
+			right: -50%;
+			opacity: 0.05;
 			width: 100%;
+		}
+		.about-bgc--two {
+			display: none;
+			top: 0;
+			left: -20%;
 		}
 		.offer-extend__footer-btn {
 			width: 100%;
@@ -676,6 +698,7 @@ section {
 		gap: 10em;
 		font-size: 1.4rem;
 		line-height: 4rem;
+		overflow: hidden;
 		&-top,
 		&-bottom {
 			align-self: flex-start;

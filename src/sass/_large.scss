@@ -117,6 +117,10 @@
 		}
 	}
 	.about-expand {
+		&__hero {
+			height: 800px;
+			background-image: url('/dist/img/_09B4142.png');
+		}
 		&__main {
 			font-size: 2.2rem;
 		}
@@ -126,6 +130,14 @@
 				a {
 					padding: 0.5em;
 				}
+			}
+		}
+		&__card {
+			.about-bgc {
+				bottom: -20%;
+			}
+			.about-bgc--two {
+				display: block;
 			}
 		}
 	}
