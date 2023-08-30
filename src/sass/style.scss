@@ -329,7 +329,7 @@ section {
 	&__desc {
 		display: flex;
 		flex-wrap: wrap;
-		padding-top: 8em;
+		// padding-top: 8em;
 		&-img {
 			width: 100%;
 			img {
@@ -423,6 +423,7 @@ section {
 				padding: 1em;
 				border: none;
 				border-bottom: 1px solid $main-color;
+				border-radius: none;
 				outline: none;
 				&::placeholder {
 					position: absolute;
@@ -614,6 +615,14 @@ section {
 	&__footer {
 		position: relative;
 		padding: 8em 0em;
+		.offer-a {
+			position: absolute;
+			bottom: 10px;
+			font-size: 1rem;
+			a {
+				color: lightgray;
+			}
+		}
 		&-contact {
 			display: flex;
 			align-self: flex-start;
@@ -624,18 +633,12 @@ section {
 			p {
 				line-height: 3rem;
 			}
-			.phone-no {
-				a {
-					color: $main-color !important;
-					text-decoration: none;
-				}
-			}
 		}
-		a {
-			position: absolute;
-			bottom: 5px;
-			color: lightgray;
-			font-size: 1rem;
+		.phone-no {
+			a {
+				color: $main-color !important;
+				text-decoration: none;
+			}
 		}
 	}
 }
