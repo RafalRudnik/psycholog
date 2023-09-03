@@ -11,8 +11,6 @@ const offerBtn = document.querySelector('.offer-btn');
 const offerLogo = document.querySelectorAll('.offer__logo');
 const sectionOffer = document.querySelector('.offer-extend');
 
-
-
 if (window.innerWidth > 992) {
 	const lenis = new Lenis();
 
@@ -54,7 +52,7 @@ resolution.add('(min-width: 768px)', () => {
 			y: '+=200',
 		},
 		{
-			y: '-=300',
+			y: '-=500',
 			duration: 5,
 			ease: 'easeInOut',
 			scrollTrigger: {

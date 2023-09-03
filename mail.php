@@ -2,8 +2,8 @@
 
 $name = $_POST["name"]; // input name="name"
 $from = $_POST["email"]; // input name="email"
-$subject = "Wiadomość z formularza na stronie rafalrudnik.github.io";
-$to = "bnc@rafal-rudnik.com"; // adres, na który ma zostać wysłany mail
+$subject = "Wiadomość z formularza na stronie www.agatalopato.pl";
+$to = "lopato.agata@gmail.com"; // adres, na który ma zostać wysłany mail
 $message = $_POST["msg"]; // textarea name="msg"
 
 $txt = "Imię: " . $name . "\r\n" . "Email: " . $from . "\r\n" . "\r\n" . "Treść: " . $message;
