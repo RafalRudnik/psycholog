@@ -11,6 +11,9 @@ const sectionAbout = document.querySelector('.about-expand');
 const aboutCloseBtn = document.querySelector('.closeAboutBtn');
 const aboutBtn = document.querySelector('.about-btn');
 
+const cookieBox = document.querySelector('.cookie-box');
+const cookieBtn = document.querySelector('.cookie-btn');
+
 const handleOpenMenu = () => {
 	burgerBtn.classList.toggle('active');
 	menu.classList.toggle('activeMenu');
@@ -93,6 +96,19 @@ const aboutToTheTop = () => {
 	});
 };
 
+const showCookie = () => {
+	const cookieEaten = localStorage.getItem('cookie');
+	if (cookieEaten) {
+		cookieBox.classList.add('hideCookie');
+	}
+};
+
+const handleCookieBox = () => {
+	localStorage.setItem('cookie', 'true');
+	cookieBox.classList.add('hideCookie');
+};
+
+showCookie();
 handleYear();
 burgerBtn.addEventListener('click', handleOpenMenu);
 window.addEventListener('scroll', hideLogo);
@@ -101,6 +117,7 @@ offerBtn.addEventListener('click', handleOpenOffer);
 offerCloseBtn.addEventListener('click', handleCloseOffer);
 aboutBtn.addEventListener('click', handleOpenAbout);
 aboutCloseBtn.addEventListener('click', handleCloseAbout);
+cookieBtn.addEventListener('click', handleCookieBox);
 
 // ================= FORM =====================
 

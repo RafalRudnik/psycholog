@@ -806,6 +806,40 @@ section {
 	animation: offerHederAnim 1s both;
 }
 
+.hideCookie {
+	display: none;
+}
+
+.cookie-box {
+	position: fixed;
+	bottom: 0;
+	padding: 2em;
+	font-size: 2rem;
+	height: 300px;
+	width: 100%;
+	text-align: center;
+	background-color: $bacground;
+	z-index: 300;
+	opacity: 0;
+	transform: translateY(100%);
+	animation: show-cookies 0.5s 0.5s forwards;
+}
+
+.cookie-btn {
+	margin-top: 1em;
+	padding: 0.5em 1em;
+	font-size: 1.6rem;
+	background-color: $purple-color;
+	color: $white-color;
+	border: 2px solid $main-color;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: opacity 0.3s;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
 @import './small';
 @import './medium';
 @import './large';
